@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat Service Web Application</title>
+        <link rel="stylesheet" href="./styles/style.css" />
+        <script src="./scripts/jquery.js"></script>
+        <script>
+           $(document).ready(()=>{
+            $(".closebtn").click(()=>{
+                $("#side-nav").animate({width: "0px"}, 300);
+            });
+            $(".icon").click(()=>{
+                $("#side-nav").animate({width: "250px"}, 300);
+                
+            });
+           })
+            
+        </script>
+    </head>
+    <body>
+        <nav class="sidebar" id="side-nav">
+            <a href="javascript:void(0)" class="closebtn" ><i class="fa fa-times-circle-o"></i></a>
+            <ul class="sidemenu">
+                
+                <li class="item"><a href="./index.html" class="link">Home</a></li>
+                <li class="item"><a href="./chat.html" class="link">Chat</a></li>
+            </ul>
+           
+        </nav>
+        <nav class="navbar" id="topbar">
+            <ul class="menu">
+                <li class="menu-item always"><a href="javascript:void(0)" class="nav-link icon"><i class="fa fa-bars"></i></a></li>
+                <li class="menu-item always"><a href="./index.html" class="nav-link brand">Let's Chat</a></li>
+                <li class="menu-item"><a href="./index.html" class="nav-link">Home</a></li>
+                <li class="menu-item"><a href="./chat.html" class="nav-link">Chat</a></li>
+            </ul>
+           
+        </nav>
+        <div class="hero">
+            <h1 class="main-head">Chat Service Web Application</h1>
+            <hr class="my" />
+            <p class="focused my">
+                Implemented using ExpressJS 4.17.1 and Socket.io 3.1.2
+            </p>
+        </div>
+    </body>
+</html>

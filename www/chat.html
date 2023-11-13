@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat Service Web Application</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./scripts/jquery.js"></script>
+    <script src="./scripts/socket.io.js"></script>
+    <script src="./scripts/socket.io-file-client.js"></script>
+    <script src="scripts/script.js"></script>
+
+  </head>
+  <body>
+    <nav class="sidebar" id="side-nav">
+      <a href="javascript:void(0)" class="closebtn"
+        ><i class="fa fa-times-circle-o"></i
+      ></a>
+      <ul class="sidemenu">
+        <li class="item"><a href="./index.html" class="link">Home</a></li>
+        <li class="item"><a href="./chat.html" class="link">Chat</a></li>
+      </ul>
+    </nav>
+    <nav class="navbar" id="topbar">
+      <ul class="menu">
+        <li class="menu-item always">
+          <a href="avascript:void(0)" class="nav-link icon"
+            ><i class="fa fa-bars"></i
+          ></a>
+        </li>
+        <li class="menu-item always">
+          <a href="./index.html" class="nav-link brand">Let's Chat</a>
+        </li>
+        <li class="menu-item">
+          <a href="./index.html" class="nav-link">Home</a>
+        </li>
+        <li class="menu-item">
+          <a href="./chat.html" class="nav-link">Chat</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="row" id="displayname">
+        <div class="col-1">Display name:</div>
+        <div class="col-3" id="uname"></div>
+      </div>
+      <div class="row" id="nameinput">
+        <div class="col-2">
+          <div class="input-add-on">
+            <input
+              type="text"
+              class="input-add-on-field"
+              id="dname"
+              placeholder="Enter your display name here"
+            />
+            <button class="input-add-on-item" id="connect">Connect</button>
+          </div>
+        </div>
+        <div class="col-2">&nbsp;</div>
+      </div>
+      <div class="row" id="rooms">
+        <div class="col-2">
+          <div class="input-add-on">
+            <select type="text" class="input-add-on-field" id="gnames">
+              <option value="" selected>Select group</option>
+            </select>
+            <button class="input-add-on-item" id="join">Join</button>
+          </div>
+        </div>
+        <div class="col-2">&nbsp;</div>
+      </div>
+
+      <div id="messages">
+        <div class="row">
+          <div class="col-1">
+            <h3 class="sub-head" style="width: calc(100% - 2.5rem)">Users</h3>
+            <ul id="users" class="l-group"></ul>
+          </div>
+          <div class="col-3" >
+            <div class="input-add-on">
+              <input
+                type="text"
+                class="input-add-on-field"
+                id="msg"
+                placeholder="Message"
+              />
+
+              <button class="input-add-on-item" id="send">Send</button>
+              <button class="input-add-on-item" id="upload">
+                <i class="fa fa-file"></i>
+              </button>
+            </div>
+            <h3 class="sub-head" style="width: calc(100% - 2.5rem)">
+              Conversation
+            </h3>
+            <ul class="l-group" id="conversation">
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="./"
+    <form id="form" style="display: none">
+      <input type="file" id="file" />
+    </form>
+  </body>
+</html>
